@@ -42,7 +42,7 @@ class Validated {
             return phoneNumber
         }
     }
-
+  
     init(wrappedValue: String, validator: @escaping validClouse, fallback: String) {
         
         self.validator = validator

@@ -23,9 +23,16 @@ class ViewController: UIViewController {
 //        TestLevelUp.testValidated()
         
         
-        let viewModel = ViewModel()
-        viewModel.subscribe()
-        viewModel.updateName()
+//        let viewModel = ViewModel()
+//        viewModel.subscribe()
+//        viewModel.updateName()
+
+        var combineTest = MyCombineTest()
+        
+        combineTest.testBaseOperation()
+        
+        // 保持程序运行
+        RunLoop.main.run()
 
     }
 

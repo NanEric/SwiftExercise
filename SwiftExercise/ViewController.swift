@@ -38,10 +38,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
 
         ////////////////////// Form Auth ////////////////////
+        #if COMMENT
         let textfieldName: UITextField = UITextField()
         textfieldName.bounds = CGRect(origin: CGPoint(x: 0,y: 0), size: CGSize(width: 300, height: 100))
         textfieldName.center = view.center
-//        textfieldName.borderStyle = .roundedRect
         textfieldName.layer.borderColor = UIColor.blue.cgColor
         textfieldName.layer.borderWidth = 1
         view.addSubview(textfieldName)
@@ -64,6 +64,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(btn)
         btn.frame = CGRect(origin: CGPoint(x: 50, y: 50), size: CGSize(width: 100, height: 50))
         btn.addTarget(self, action: #selector(changeValue), for: .touchUpInside)
+        #endif
+        ///////////////// Auth end //////////////////////////////
+        ///
+    
+        var taskGroupQuizVC = TaskGroupQuizViewController()
+        
+        Task {
+            let result = try await taskGroupQuizVC.loadAllUsersData()
+            print("\(result)")
+        }
+        
+        
+        
     }
 
     @objc func changeValue() {

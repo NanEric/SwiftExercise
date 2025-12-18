@@ -82,36 +82,6 @@
             endingLineNumber = "65"
             landmarkName = "testBaseOperation()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0D140A4F-735E-48B1-BA90-C76D574894A1 - 64dc269a7fa54199"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftExercise.MyCombineTest.testBaseOperation() -&gt; ()"
-                  moduleName = "SwiftExercise.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eric/Documents/projects/native/SwiftExercise/SwiftExercise/Combine/PublisherExercise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65">
-               </Location>
-               <Location
-                  uuid = "0D140A4F-735E-48B1-BA90-C76D574894A1 - b1f90764940aad1a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (Swift.Int) -&gt; () in SwiftExercise.MyCombineTest.testBaseOperation() -&gt; ()"
-                  moduleName = "SwiftExercise.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eric/Documents/projects/native/SwiftExercise/SwiftExercise/Combine/PublisherExercise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,36 +98,6 @@
             endingLineNumber = "44"
             landmarkName = "testBaseOperation()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "326FA73B-E132-490B-BF15-765C8432F044 - 64dc269a7fa55c2e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftExercise.MyCombineTest.testBaseOperation() -&gt; ()"
-                  moduleName = "SwiftExercise.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eric/Documents/projects/native/SwiftExercise/SwiftExercise/Combine/PublisherExercise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44">
-               </Location>
-               <Location
-                  uuid = "326FA73B-E132-490B-BF15-765C8432F044 - f54f6f5218c58337"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; Swift.Bool in SwiftExercise.MyCombineTest.testBaseOperation() -&gt; ()"
-                  moduleName = "SwiftExercise.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eric/Documents/projects/native/SwiftExercise/SwiftExercise/Combine/PublisherExercise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,26 +158,10 @@
             filePath = "SwiftExercise/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "textFieldDidEndEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "03D8D2F0-6643-47F7-A5DD-52EB969EFEDA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftExercise/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -250,10 +174,10 @@
             filePath = "SwiftExercise/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "changeNameInModelData()"
-            landmarkType = "7">
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -266,9 +190,9 @@
             filePath = "SwiftExercise/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "changeValue()"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

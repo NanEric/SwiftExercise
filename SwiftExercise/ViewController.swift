@@ -68,14 +68,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         ///////////////// Auth end //////////////////////////////
         ///
     
-        var taskGroupQuizVC = TaskGroupQuizViewController()
+        // var taskGroupQuizVC = TaskGroupQuizViewController()
         
-        Task {
-            let result = try await taskGroupQuizVC.loadAllUsersData()
-            print("\(result)")
-        }
+        // Task {
+        //     let result = try await taskGroupQuizVC.loadAllUsersData()
+        //     print("\(result)")
+        // }
         
-        
+        let cabinet = Cabinet(style: .plastic(color: "red"))
+        let printer = CabinetPrinter(cabinet: cabinet)
+        printer.printStyle()
         
     }
 

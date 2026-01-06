@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077A91692F0D1C640027DC59 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 077A91682F0D1C640027DC59 /* SDWebImage */; };
 		07B96D6F2EE99E7500D7A54E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B96D6E2EE99E7500D7A54E /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077A91692F0D1C640027DC59 /* SDWebImage in Frameworks */,
 				07B96D6F2EE99E7500D7A54E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +142,7 @@
 			);
 			name = SwiftExercise;
 			packageProductDependencies = (
+				077A91682F0D1C640027DC59 /* SDWebImage */,
 			);
 			productName = SwiftExercise;
 			productReference = 07B96CFF2EE91AA700D7A54E /* SwiftExercise.app */;
@@ -625,6 +628,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		077A91682F0D1C640027DC59 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 077A91642F0D02AF0027DC59 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07B96CF72EE91AA700D7A54E /* Project object */;
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import SDWebImage
 
 class SnapshotViewController: UIViewController {
     
@@ -56,12 +56,39 @@ extension SnapshotViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SnapshotViewController {
     func fetchImage(url: String) async -> UIImage? {
-        guard !url.isEmpty else { return nil }
+        guard !url.isEmpty, let imageURL = URL(string: url) else { return nil }
         
-        if let imageURL = NSURL(string: url) {
-            sd_setImage(with: imageURL) { _ in
-                
+        return await withCheckedContinuation { continuation in
+            SDWebImageManager.shared.loadImage(
+                with: imageURL,
+                options: .highPriority,
+                progress: nil) { image, data, error, cacheType, finished, _  in
+                if let error = error {
+                    print("图片下载失败: \(error.localizedDescription)")
+                    continuation.resume(returning: nil)
+                    return
+                }
+                continuation.resume(returning: image)
             }
         }
+            // if  {
+            //     var imgView = UIImageView()
+            //     imgView.sd_setImage(with: URL(string: imageURL)) {
+                    
+            //     }
+            // }
+        
+        
+    }
+
+    func fetchImageView(url: String) -> UIImageView? {
+        guard !url.isEmpty, let imageURL = URL(string: url) else { return nil }
+        
+        var imgView = UIImageView()
+        imgView.sd_setImage(with: imageURL) {_,_,_,_ in 
+        }
+
+        return imgView
+                    
     }
 }

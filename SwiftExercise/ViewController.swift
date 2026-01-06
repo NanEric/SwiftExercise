@@ -14,6 +14,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var cancellables = Set<AnyCancellable>()
     
     var btn: UIButton = UIButton(type: .roundedRect)
+    
+    var newVCBtn: UIButton = UIButton(type: .roundedRect)
+    
+    private var snapshotVC: SnapshotViewController = SnapshotViewController(nibName: nil, bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,12 +79,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //     print("\(result)")
         // }
         
-        let cabinet = Cabinet(style: .plastic(color: "red"))
-        let printer = CabinetPrinter(cabinet: cabinet)
-        printer.printStyle()
+//        let cabinet = Cabinet(style: .plastic(color: "red"))
+//        let printer = CabinetPrinter(cabinet: cabinet)
+//        printer.printStyle()
+        
+        
+        newVCBtn.setTitle("add new VC", for: UIControl.State.normal)
+        view.addSubview(newVCBtn)
+        newVCBtn.frame = CGRect(origin: CGPoint(x: 50, y: 50), size: CGSize(width: 100, height: 50))
+        newVCBtn.addTarget(self, action: #selector(addNewVC), for: .touchUpInside)
         
     }
 
+    @objc func addNewVC() {
+        
+//        guard let nav = self.navigationController else { return }
+//        nav.pushViewController(snapshotVC, animated: true)
+        
+        let nav = UINavigationController(rootViewController: snapshotVC)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true)
+        
+    }
+    
     @objc func changeValue() {
         vm.changeNameInModelData()
     }

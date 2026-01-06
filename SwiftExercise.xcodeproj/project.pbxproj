@@ -223,6 +223,9 @@
 			);
 			mainGroup = 07B96CF62EE91AA700D7A54E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				077A91642F0D02AF0027DC59 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 07B96D002EE91AA700D7A54E /* Products */;
 			projectDirPath = "";
@@ -611,6 +614,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		077A91642F0D02AF0027DC59 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 07B96CF72EE91AA700D7A54E /* Project object */;
 }

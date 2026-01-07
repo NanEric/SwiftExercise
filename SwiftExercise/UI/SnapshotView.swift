@@ -44,7 +44,7 @@ extension SnapshotViewController: UITableViewDelegate, UITableViewDataSource {
         let cellIndentifier = "snapshot"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIndentifier) else {
-            var newCell = UITableViewCell(style: .default, reuseIdentifier: cellIndentifier)
+            var newCell = ImageViewCell(style: .default, reuseIdentifier: cellIndentifier)
             return newCell
         }
 
@@ -54,7 +54,27 @@ extension SnapshotViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension SnapshotViewController {
+class SnapshotDownloader {
+    // MARK: - directly download image & return image
+    func startFetchImage() async -> UIImage? {
+        return await fetchImage(url: "https://example.com/image.jpg")
+    }
+    
+    // MARK: - directly download image & call completion
+    func startFetchImage(completion: @escaping (UIImage?)->Void) {
+        Task {
+            let image = try await fetchImage(url: "https://example.com/image.jpg")
+            completion(image)
+        }
+    }
+    
+    // MARK: - directly download image & return Task
+    func startFetchImage() -> Task<UIImage?, Error> {
+        return Task {
+            return try await fetchImage(url: "https://example.com/image.jpg")
+        }
+    }
+
     func fetchImage(url: String) async -> UIImage? {
         guard !url.isEmpty, let imageURL = URL(string: url) else { return nil }
         
@@ -70,15 +90,7 @@ extension SnapshotViewController {
                 }
                 continuation.resume(returning: image)
             }
-        }
-            // if  {
-            //     var imgView = UIImageView()
-            //     imgView.sd_setImage(with: URL(string: imageURL)) {
-                    
-            //     }
-            // }
-        
-        
+        }        
     }
 
     func fetchImageView(url: String) -> UIImageView? {
